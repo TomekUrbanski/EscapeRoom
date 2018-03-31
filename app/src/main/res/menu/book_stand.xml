@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/watchBookstand"
+        android:title="@string/watch"/>
+
+    <item
+        android:id="@+id/searchBookstand"
+        android:title="@string/search"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/leavBookstand"
+        android:title="@string/leave"/>
+</menu>

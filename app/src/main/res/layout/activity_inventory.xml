@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.escaperoom.inventory">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_inventory" />
+
+
+    <ImageView
+        android:id="@+id/formula"
+        android:layout_width="@dimen/formula_inventory_width"
+        android:layout_height="@dimen/formula_inventory_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/formula_inventory_marginT"
+        android:visibility="invisible"
+        android:src="@drawable/formula" />
+
+
+    <ImageView
+        android:id="@+id/first_peace"
+        android:layout_width="@dimen/first_peace_width"
+        android:layout_height="@dimen/first_peace_height"
+        android:layout_alignEnd="@+id/formula"
+        android:layout_below="@+id/formula"
+        android:layout_marginEnd="@dimen/fisrt_peace_marginE"
+        android:layout_marginTop="@dimen/first_peace_marginT"
+        android:visibility="invisible"
+        android:src="@drawable/ferst_piece" />
+
+    <ImageView
+        android:id="@+id/second_peace"
+        android:layout_width="@dimen/second_peace_width"
+        android:layout_height="@dimen/second_peace_height"
+        android:layout_alignStart="@+id/formula"
+        android:layout_alignTop="@+id/first_peace"
+        android:layout_marginStart="@dimen/second_peace_marginS"
+        android:visibility="invisible"
+        android:src="@drawable/second_piece" />
+
+    <ImageView
+        android:id="@+id/keys"
+        android:layout_width="@dimen/keys_inventory_width"
+        android:layout_height="@dimen/keys_inventory_height"
+        android:layout_above="@+id/back"
+        android:layout_alignStart="@+id/first_peace"
+        android:visibility="invisible"
+        android:src="@drawable/keys" />
+
+    <ImageView
+        android:id="@+id/key"
+        android:layout_width="@dimen/key_inventory_width"
+        android:layout_height="@dimen/key_inventory_height"
+        android:layout_alignTop="@+id/keys"
+        android:layout_toEndOf="@+id/keys"
+        android:src="@drawable/key"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="@dimen/back_width"
+        android:layout_height="@dimen/back_height"
+        android:layout_margin="@dimen/back_margin"
+        android:background="@drawable/back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="back"
+        android:id="@+id/back" />
+
+
+</RelativeLayout>

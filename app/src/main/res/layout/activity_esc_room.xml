@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.escaperoom.escRoom">
+
+    <Button
+        android:layout_width="@dimen/inventory_width"
+        android:layout_height="@dimen/inventory_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/backpack"
+        android:onClick="inventory"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/room"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/room_empty" />
+
+
+            <Button
+                android:id="@+id/chest"
+                android:layout_width="@dimen/chest_width"
+                android:layout_height="@dimen/chest_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/chest_marginB"
+                android:layout_marginStart="@dimen/chest_marginS"
+                android:background="@drawable/chest"
+                android:onClick="popupChest" />
+
+            <Button
+                android:id="@+id/bookstand"
+                android:layout_width="@dimen/bookstand_width"
+                android:layout_height="@dimen/bookstand_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/bookstand_marginB"
+                android:layout_marginStart="@dimen/bookstand_marginS"
+                android:background="@drawable/bookstand"
+                android:onClick="popupBookstand" />
+
+            <Button
+                android:id="@+id/sofa"
+                android:layout_width="@dimen/sofa_width"
+                android:layout_height="@dimen/sofa_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/sofa_marginB"
+                android:layout_marginStart="@dimen/sofa_marginS"
+                android:background="@drawable/sofa"
+                android:onClick="popupSofa" />
+
+            <Button
+                android:id="@+id/jacket"
+                android:layout_width="@dimen/jacket_width"
+                android:layout_height="@dimen/jacket_height"
+                android:layout_alignEnd="@id/room"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/jacket_marginB"
+                android:layout_marginEnd="@dimen/jacket_marginE"
+                android:background="@drawable/jacket"
+                android:onClick="popupJacket" />
+
+            <Button
+                android:id="@+id/door_lock"
+                android:layout_width="@dimen/door_lock_width"
+                android:layout_height="@dimen/door_lock_height"
+                android:layout_alignEnd="@id/room"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/door_lock_marginB"
+                android:layout_marginEnd="@dimen/door_lock_marginE"
+                android:background="@drawable/door_lock"
+                android:onClick="popupDoor" />
+
+            <Button
+                android:id="@+id/safe"
+                android:layout_width="@dimen/safe_width"
+                android:layout_height="@dimen/safe_height"
+                android:layout_alignEnd="@id/room"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/safe_marginB"
+                android:layout_marginEnd="@dimen/safe_marginE"
+                android:background="@drawable/safe"
+                android:onClick="moveToSafe"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/paint"
+                android:layout_width="@dimen/paint_width"
+                android:layout_height="@dimen/paint_height"
+                android:layout_alignEnd="@id/room"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/paint_marginB"
+                android:layout_marginEnd="@dimen/paint_marginE"
+                android:background="@drawable/paint"
+                android:onClick="popupPaint"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/takenPaint"
+                android:layout_width="@dimen/takenPaint_width"
+                android:layout_height="@dimen/takenPaint_height"
+                android:layout_alignEnd="@id/room"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/takenPaint_marginB"
+                android:layout_marginEnd="@dimen/takenPaint_marginE"
+                android:background="@drawable/removed_paint"
+                android:onClick="popupPaint"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/trash_can"
+                android:layout_width="@dimen/trash_can_width"
+                android:layout_height="@dimen/trash_can_height"
+                android:layout_alignEnd="@id/room"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/trash_can_marginB"
+                android:layout_marginEnd="@dimen/trash_can_marginE"
+                android:background="@drawable/tresh_can"
+                android:onClick="popupTrashCan" />
+
+
+            <Button
+                android:id="@+id/desk"
+                android:layout_width="@dimen/desk_width"
+                android:layout_height="@dimen/desk_height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/desk"
+                android:onClick="popupSofa" />
+
+
+        </RelativeLayout>
+
+
+    </HorizontalScrollView>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Escape Room</string>
+    <string name="question">Do you agree to lock you in a mysterious room ?</string>
+    <string name="next">NEXT</string>
+    <string name="title_activity_esc_room">escRoom</string>
+    <string name="leave">LEAVE</string>
+    <string name="open">OPEN</string>
+    <string name="watch">WATCH</string>
+    <string name="search">SEARCH</string>
+    <string name="remove">REMOVE</string>
+    <string name="code">CODE</string>
+    <string name="correct">CORRECT</string>
+    <string name="read">READ</string>
+    <string name="colect">COLECT</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="approve">YES</string>
+    <string name="refuse">NO</string>
+    <string name="book1">Comic Book</string>
+    <string name="book2">Photo album</string>
+    <string name="book3">Leaflet</string>
+    <string name="book4">Diary</string>
+    <string name="book5">Toilet paper</string>
+    <string name="book6">Googl App Engine</string>
+    <string name="book7">School Newsletter</string>
+    <string name="book8">Dictionary</string>
+    <string name="book9">Encyclopedia</string>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.escaperoom.safe">
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cegly"
+        android:scaleType="centerCrop"/>
+
+
+    <ImageView
+        android:id="@+id/safe"
+        android:layout_width="@dimen/safe_zoomed_width"
+        android:layout_height="@dimen/safe_zoomed_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/safe"
+        />
+
+    <Button
+        android:id="@+id/key"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:background="@drawable/key"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:onClick="key"/>
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/star_height"
+        android:src="@drawable/star"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        />
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:visibility="invisible"
+    android:id="@+id/relativeLayoutCodeMesage">
+
+    <ImageView
+        android:id="@+id/code_frame"
+        android:src="@drawable/frame"
+        android:layout_marginTop="@dimen/code_frame_marginT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        />
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="@dimen/code_editText_width"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/code_frame"
+        android:hint="@string/code"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="42sp"
+        />
+</RelativeLayout>
+
+    <Button
+        android:layout_width="@dimen/code_panel_width"
+        android:layout_height="@dimen/code_panel_height"
+        android:layout_alignBaseline="@+id/open_safe"
+        android:layout_alignEnd="@+id/relativeLayoutCodeMesage"
+        android:layout_marginEnd="@dimen/code_panel_marginE"
+        android:background="@drawable/vanish_button"
+        android:onClick="enterCode"
+        android:id="@+id/open_code_frame" />
+
+    <Button
+        android:id="@+id/open_safe"
+        android:layout_width="@dimen/safe_handle_width"
+        android:layout_height="@dimen/safe_handle_height"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/safe_handle_marginE"
+        android:layout_toStartOf="@+id/open_code_frame"
+        android:background="@drawable/vanish_button"
+        android:onClick="openSafe" />
+
+
+    <Button
+        android:layout_width="@dimen/back_width"
+        android:layout_height="@dimen/back_height"
+        android:layout_margin="@dimen/back_margin"
+        android:background="@drawable/back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="back"/>
+
+    </RelativeLayout>

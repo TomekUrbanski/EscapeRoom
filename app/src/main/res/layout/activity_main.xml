@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242"
+    tools:context="com.example.android.escaperoom.MainActivity">
+
+    <TextView
+        android:layout_width="@dimen/question_width"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@+id/next"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/qustion_marginB"
+        android:text="@string/question"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:shadowColor="#76FF03"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="24"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/decision_marginT">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/approve"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/refuse"
+            android:textColor="@android:color/white"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next"
+        android:text="@string/next"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:shadowColor="#76FF03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="@dimen/button_next_marginT"
+        android:layout_marginStart="@dimen/button_next_marginS"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:onClick="moveOn"
+        />
+
+</RelativeLayout>

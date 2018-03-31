@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.android.escaperoom.bookstand">
+
+    <RadioGroup
+        android:id="@+id/bookList"
+        android:layout_width="@dimen/bookList_width"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/pile_of_books"
+        android:paddingStart="@dimen/bookList_paddingS">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book1" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book2" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book3" />
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book4" />
+
+        <RadioButton
+            android:id="@+id/rb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book5" />
+
+        <RadioButton
+            android:id="@+id/rb6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book6" />
+
+        <RadioButton
+            android:id="@+id/rb7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book7" />
+
+        <RadioButton
+            android:id="@+id/rb8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book8" />
+
+        <RadioButton
+            android:id="@+id/rb9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book9" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/read"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp"
+            android:onClick="readBook"
+            android:text="@string/read" />
+
+
+        <ImageView
+            android:id="@+id/book"
+            android:layout_width="@dimen/book_width"
+            android:layout_height="@dimen/book_height"
+            android:layout_below="@+id/read"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/book_marginT"
+            android:adjustViewBounds="true"
+            android:src="@drawable/book"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/secretBook"
+            android:layout_width="@dimen/secretBook_width"
+            android:layout_height="@dimen/secretBook_height"
+            android:layout_alignStart="@+id/book"
+            android:layout_alignTop="@+id/book"
+            android:adjustViewBounds="true"
+            android:src="@drawable/secret_book"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/key"
+            android:layout_width="@dimen/keys_width"
+            android:layout_height="@dimen/keys_height"
+            android:layout_alignEnd="@+id/read"
+            android:layout_alignTop="@+id/book"
+            android:layout_marginTop="@dimen/key_marginT"
+            android:background="@drawable/keys"
+            android:visibility="invisible"
+            android:onClick="popupBookKey"/>
+
+        <TextView
+            android:id="@+id/book_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/secretBook"
+            android:layout_marginTop="@dimen/book_description_marginT"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="@dimen/back_width"
+            android:layout_height="@dimen/back_height"
+            android:layout_alignEnd="@+id/book"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/back_marginB"
+            android:background="@drawable/back"
+            android:onClick="back" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
