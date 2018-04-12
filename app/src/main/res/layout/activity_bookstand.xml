@@ -123,7 +123,7 @@
             android:layout_height="@dimen/keys_height"
             android:layout_alignEnd="@+id/read"
             android:layout_alignTop="@+id/book"
-            android:layout_marginTop="@dimen/key_marginT"
+            android:layout_marginTop="@dimen/keys_marginT"
             android:background="@drawable/keys"
             android:visibility="invisible"
             android:onClick="popupBookKey"/>
